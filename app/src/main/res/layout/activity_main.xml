@@ -30,35 +30,36 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Red" />
+            android:backgroundTint="#FF0000"
+            android:textColor="@android:color/black" />
 
         <Button
             android:id="@+id/button16"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Green" />
+            android:backgroundTint="#4CAF50" />
 
         <Button
             android:id="@+id/button17"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Blue" />
+            android:backgroundTint="#3F51B5" />
 
         <Button
             android:id="@+id/button18"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Yellow" />
+            android:backgroundTint="#FFEB3B" />
 
         <Button
             android:id="@+id/button19"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Purple" />
+            android:backgroundTint="#673AB7" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
