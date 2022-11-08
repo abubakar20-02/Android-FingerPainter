@@ -22,5 +22,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button BrushSettingsbutton= findViewById(R.id.BrushSettings);
+        BrushSettingsbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(MainActivity.this, BrushSettings.class);
+                startActivity(intent);
+            }
+        });
     }
 }
