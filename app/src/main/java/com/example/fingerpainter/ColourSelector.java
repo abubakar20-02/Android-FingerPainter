@@ -17,7 +17,6 @@ public class ColourSelector extends AppCompatActivity {
     final int Orange = 0xFFFF5722;
     final int Purple = 0xFF673AB7;
     int Color;
-    boolean Clicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
