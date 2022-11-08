@@ -86,6 +86,7 @@ public class FingerPainterView extends View {
 
     public void setColour(int colour) {
         paint.setColor(colour);
+        System.out.println("color changed");
     }
 
     public int getColour() {

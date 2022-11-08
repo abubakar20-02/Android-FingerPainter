@@ -30,11 +30,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <view
-        android:id="@+id/view"
+        android:id="@+id/myFingerPainterViewId"
         class="com.example.fingerpainter.FingerPainterView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
