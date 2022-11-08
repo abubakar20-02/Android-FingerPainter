@@ -1,5 +1,6 @@
 package com.example.fingerpainter;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,25 +10,36 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FingerPainterView myFingerPainterView = findViewById(R.id.myFingerPainterViewId);
-        myFingerPainterView.setColour(Color.parseColor("#FF00FF00"));
         getSupportActionBar().hide();
 
-        Button button= findViewById(R.id.ColourSelector);
+        Button button = findViewById(R.id.ColourSelector);
         button.setOnClickListener(view -> {
-            Intent intent= new Intent(MainActivity.this, ColourSelector.class);
-            startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, ColourSelector.class);
+            startActivityForResult(intent, 1);
         });
 
-        Button BrushSettingsbutton= findViewById(R.id.BrushSettings);
+        Button BrushSettingsbutton = findViewById(R.id.BrushSettings);
         BrushSettingsbutton.setOnClickListener(view -> {
-            Intent intent= new Intent(MainActivity.this, BrushSettings.class);
+            Intent intent = new Intent(MainActivity.this, BrushSettings.class);
             startActivity(intent);
         });
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        FingerPainterView myFingerPainterView = findViewById(R.id.myFingerPainterViewId);
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && resultCode == RESULT_OK){
+            int diff = data.getIntExtra("Color", 0xFFFF0000);
+            myFingerPainterView.setColour(diff);
+        }
+    }
+
+
 }
