@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FingerPainterView myFingerPainterView = findViewById(R.id.myFingerPainterViewId);
         getSupportActionBar().hide();
 
         Button button = findViewById(R.id.ColourSelector);
@@ -31,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //https://www.youtube.com/watch?v=uToOj67nl8Y&ab_channel=FilipVujovic (for colour)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         FingerPainterView myFingerPainterView = findViewById(R.id.myFingerPainterViewId);
