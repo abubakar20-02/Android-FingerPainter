@@ -10,14 +10,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ColourSelector extends AppCompatActivity {
 
+    // used constants so that code is easier to alter if needed.
     final int Red = 0xFFFF0000;
     final int Green = 0xFF4CAF50;
     final int Blue = 0xFF3F51B5;
     final int Yellow = 0xFFFFEB3B;
     final int Orange = 0xFFFF5722;
     final int Purple = 0xFF673AB7;
+
     int Color;
 
+    // when any of the button is clicked it sends the colour to the main activity.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -67,6 +70,7 @@ public class ColourSelector extends AppCompatActivity {
 
     }
 
+    // method to send data to main activity.
     public void onClick(){
         Intent result = new Intent();
         result.putExtra("Color",Color);

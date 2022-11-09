@@ -21,6 +21,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+// I have not altered anything in the code that was provided to me.
 
 /**
  * Created by pszmdf on 13/10/16.
