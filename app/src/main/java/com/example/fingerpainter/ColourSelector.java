@@ -61,13 +61,6 @@ public class ColourSelector extends AppCompatActivity {
             onClick();
         });
 
-        button = findViewById(R.id.ColourPurple);
-        button.setOnClickListener(view -> {
-            Color = Purple;
-            onClick();
-        });
-
-
     }
 
     // method to send data to main activity.
