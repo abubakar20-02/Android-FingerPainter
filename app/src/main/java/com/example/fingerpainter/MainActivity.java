@@ -2,10 +2,12 @@ package com.example.fingerpainter;
 
 import static android.content.ContentValues.TAG;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.net.Uri;
@@ -64,5 +66,21 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        FingerPainterView myFingerPainterView = findViewById(R.id.myFingerPainterViewId);
+        outState.putInt("Color", myFingerPainterView.getColour());
+        outState.putInt("Width", myFingerPainterView.getBrushWidth());
+        outState.putString("Type", (myFingerPainterView.getBrush()).toString());
+    }
 
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        FingerPainterView myFingerPainterView = findViewById(R.id.myFingerPainterViewId);
+        super.onRestoreInstanceState(savedInstanceState);
+        myFingerPainterView.setColour(savedInstanceState.getInt("Color"));
+        myFingerPainterView.setBrushWidth(savedInstanceState.getInt("Width"));
+        myFingerPainterView.setBrush(Paint.Cap.valueOf(savedInstanceState.getString("Type")));
+    }
 }
