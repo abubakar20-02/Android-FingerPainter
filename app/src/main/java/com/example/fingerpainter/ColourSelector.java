@@ -16,7 +16,6 @@ public class ColourSelector extends AppCompatActivity {
     final int Blue = 0xFF3F51B5;
     final int Yellow = 0xFFFFEB3B;
     final int Orange = 0xFFFF5722;
-    final int Purple = 0xFF673AB7;
 
     int Color;
 

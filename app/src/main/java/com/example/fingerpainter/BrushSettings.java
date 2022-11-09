@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class BrushSettings extends AppCompatActivity {
 
+    // initialising the brush activity to have Round brush type checked and a value of 20 px width
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,9 +21,7 @@ public class BrushSettings extends AppCompatActivity {
         getSupportActionBar().hide();
 
         Button button = findViewById(R.id.ApplyButton);
-        button.setOnClickListener(view -> {
-            onClick();
-        });
+        button.setOnClickListener(view -> onClick());
 
     }
 
