@@ -26,15 +26,18 @@ public class BrushSettings extends AppCompatActivity {
     }
 
     public void onClick(){
-//        Intent result = new Intent();
-////        result.putExtra("Color",Color);
-//        setResult(RESULT_OK,result);
         int width = Integer.parseInt(String.valueOf(((EditText) findViewById(R.id.Width)).getText()));
         RadioGroup Round = findViewById(R.id.BrushType);
         int selectedId=Round.getCheckedRadioButtonId();
         RadioButton radioButton= findViewById(selectedId);
-        System.out.println(radioButton.getText());
+        String BrushType= (String) radioButton.getText();
+        System.out.println(BrushType);
         System.out.println(width);
+
+        Intent result = new Intent();
+        result.putExtra("Width",width);
+        result.putExtra("BrushType",BrushType);
+        setResult(RESULT_OK,result);
         finish();
     }
 }
