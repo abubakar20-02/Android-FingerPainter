@@ -64,6 +64,7 @@
             android:id="@+id/ApplyButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#9C27B0"
             android:text="Apply changes" />
 
     </LinearLayout>

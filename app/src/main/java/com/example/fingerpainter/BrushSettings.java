@@ -40,6 +40,7 @@ public class BrushSettings extends AppCompatActivity {
         result.putExtra("Width",width);
         result.putExtra("BrushType",BrushType);
         setResult(RESULT_OK,result);
+
         finish();
     }
 }
