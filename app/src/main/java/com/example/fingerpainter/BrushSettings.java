@@ -16,6 +16,8 @@ public class BrushSettings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brush_settings);
+        EditText et = (EditText)findViewById(R.id.Width);
+        et.setText("20");
         getSupportActionBar().hide();
 
         Button button = findViewById(R.id.ApplyButton);

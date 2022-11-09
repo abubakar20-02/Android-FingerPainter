@@ -1,15 +1,20 @@
 package com.example.fingerpainter;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.File;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+
+        FingerPainterView myFingerPainterView = findViewById(R.id.myFingerPainterViewId);
+        myFingerPainterView.load(getIntent().getData());
+
 
         Button button = findViewById(R.id.ColourSelector);
         button.setOnClickListener(view -> {
