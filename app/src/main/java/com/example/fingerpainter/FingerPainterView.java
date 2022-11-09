@@ -85,10 +85,7 @@ public class FingerPainterView extends View {
         return (int) paint.getStrokeWidth();
     }
 
-    public void setColour(int colour) {
-        paint.setColor(colour);
-        System.out.println("color changed");
-    }
+    public void setColour(int colour) {paint.setColor(colour);}
 
     public int getColour() {
         return paint.getColor();
